@@ -121,7 +121,7 @@ label {
 	
 	margin-right:auto;
 	background-position:center;
-	background-image:url(http://localhost/SiteSport/img/logo1.jpg );
+	background-image:url(../img/logo1.jpg );
 	background-repeat:no-repeat;
 	
     /*background-size:cover;	*/
