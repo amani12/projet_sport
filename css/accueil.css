@@ -116,10 +116,10 @@ label {
 
 
 #header {
-    width:100%;
-	height:140px;
+    width:1000px;
+	height:100px;
 	
-	margin-right:auto;
+	margin:auto;
 	background-position:center;
 	background-image:url(../img/logo1.jpg );
 	background-repeat:no-repeat;
@@ -131,8 +131,8 @@ label {
 #portal-siteactions {
   position: absolute;
   
-  left: 1064px;
-  top: 30px;
+  left: 1018px;
+  top: 25px;
   z-index: 5;
 }
 #portal-siteactions li {
@@ -163,10 +163,13 @@ label {
 
 #emptyspace {
 	
-    width:100%;
-	height:10px;
-	background-color:#fffff;
-    background-size:cover;	      
+    width:1000px;
+	height:5px;
+	background-color:#ffdb42;
+	margin:auto;
+	background-position:center;
+	background-repeat:no-repeat;
+    	      
 }
 
 
