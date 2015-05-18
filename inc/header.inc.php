@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="../../css/accueil.css">
 </head>
 <body>
+<div id="portal-top">
 <div id ="header">
   <ul id="portal-siteactions">
 
