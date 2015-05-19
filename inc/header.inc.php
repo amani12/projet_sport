@@ -7,7 +7,8 @@
 </head>
 <body>
 <?php require_once('config.php');
-		require_once('../../lib/lib_db.class.php');?>
+	  require_once('../../lib/lib_db.class.php');
+?>
 <div id ="header">
   <ul id="portal-siteactions">
 
@@ -38,7 +39,7 @@
             <li class="navTreeItem">
                 
                    <div class="visualIcon contenttype-plone-site">
-                       <a class="navTreeCurrentItem visualIconPadding" href="index.php" title="">
+                       <a class="navTreeCurrentItem visualIconPadding" href="../" title="">
                        Accueil
                        
                        </a>
@@ -55,7 +56,7 @@
 
     <div class="visualIcon contenttype-folder">
         
-        <a href="http://www.uha.fr/international-relations" class="state-published visualIconPadding" title="">Contrat pedagogique</a>
+        <a href="../contrat_pedagogique/" class="state-published visualIconPadding" title="">Contrat pedagogique</a>
         
     </div>
 
@@ -99,7 +100,7 @@
 
     <div class="visualIcon contenttype-folder">
         
-        <a href="http://www.uha.fr/research" class="state-published visualIconPadding" title="">Guide des Activites</a>
+        <a href="" class="state-published visualIconPadding" title="">Guide des Activites</a>
         
     </div>
 
