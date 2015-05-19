@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="../../css/accueil.css">
 </head>
 <body>
-
+<?php require_once('config.php');?>
 <div id ="header">
   <ul id="portal-siteactions">
 
