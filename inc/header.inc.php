@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="../../css/accueil.css">
 </head>
 <body>
-<?php require_once('config.php');?>
+<?php require_once('config.php');
+		require_once('../../lib/lib_db.class.php');?>
 <div id ="header">
   <ul id="portal-siteactions">
 
