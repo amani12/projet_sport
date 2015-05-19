@@ -180,7 +180,9 @@ label {
 }
 
 #lowerpage {
-	
+	width:1000px;
+	margin:auto;
+	background-position:center;
     background-color: transparent;
     margin-left:9% ;
 	height:500px;
