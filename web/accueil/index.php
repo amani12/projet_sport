@@ -1,13 +1,10 @@
 <?php
 require_once('../../inc/header.inc.php');
 require_once('../../inc/tete.inc.php');
-<<<<<<< HEAD
-=======
+
 $db = new DB_connection();
 $requete ='SELECT * FROM `actualite` ';
 $db->DB_query($requete);
-
->>>>>>> origin/master
 
 ?>
 
