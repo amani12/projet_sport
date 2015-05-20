@@ -156,7 +156,9 @@ label {
     border: medium none;
     color: white;
 }
-
+.liste_style{
+font-weight: bold;
+}
 
 
 

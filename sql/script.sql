@@ -46,6 +46,7 @@ CREATE TABLE Activite(
         capacite_max         Int ,
         etat                 Bool ,
         numero_personne      Varchar (25) ,
+		date_premier_cours	Varchar (25),
         PRIMARY KEY (ref_activite )
 )ENGINE=InnoDB;
 
