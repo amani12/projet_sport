@@ -60,7 +60,7 @@
 
     <div class="visualIcon contenttype-folder">
         
-        <a href="http://www.uha.fr/presentation-en" class="state-published visualIconPadding" title="">Projet Pedagogique</a>
+        <a href="" class="state-published visualIconPadding" title="">Projet Pedagogique</a>
         
     </div>
 
@@ -89,7 +89,7 @@
 
     <div class="visualIcon contenttype-folder">
         
-        <a href="" class="state-published visualIconPadding" title="">Guide des Activites</a>
+        <a href="../guide_activite/" class="state-published visualIconPadding" title="">Guide des Activites</a>
         
     </div>
 

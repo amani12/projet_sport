@@ -4,21 +4,22 @@
 	<meta charset="ISO-8859-1">
 	<title>Gymnase UHA</title>
 	<link rel="stylesheet" href="../../css/accueil.css">
-</head>
-
+	<link rel="stylesheet" href="../../js/fancybox/source/jquery.fancybox.css">
 	<script src="../../js/jquery-2.1.1.min.js"></script>
 	<script src="../../js/jquery-ui.js"></script>
 	<script src="../../js/fancybox/source/jquery.fancybox.pack.js"></script>
-	<script>
-	$(function()
-	{
-		// Pour le suivi des commandes (admin)
-		$("#fancy").fancybox({
-			'width':'35%',
-			'height':'50%',
-			'type':'iframe',
-			'autoScale':'false'
-        });
+	<script type="text/javascript">
+	
+		$( document ).ready(function() {
+			$("#fancy").fancybox({
+				
+				type: "iframe",
+				width: '40%',
+				height: '40%',
+				onClosed: function() {   
+     parent.location.reload(true); 
+    ;}
+								});
 	});
 	</script>
 </head>
