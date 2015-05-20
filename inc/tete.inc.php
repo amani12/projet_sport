@@ -35,7 +35,19 @@
                    </div>
                 
             </li>
-            
+ <li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="visualIcon contenttype-folder">
+        
+        <a href="../contrat_pedagogique/" class="state-published visualIconPadding" title="">Inscription</a>
+        
+    </div>
+
+    
+    
+</li>           
 
 
 
