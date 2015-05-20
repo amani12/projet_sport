@@ -2,7 +2,6 @@
 #        Script MySQL.
 #------------------------------------------------------------
 DROP TABLE IF EXISTS peut_concerner;
-DROP TABLE IF EXISTS Mesagerie;
 DROP TABLE IF EXISTS licencier,Club;
 DROP TABLE IF EXISTS reserve;
 DROP TABLE IF EXISTS concerner, actualite;
@@ -10,6 +9,7 @@ DROP TABLE IF EXISTS s_inscrire;
 DROP TABLE IF EXISTS adresser,messagerie;
 DROP TABLE IF EXISTS pratiquer;
 DROP TABLE IF EXISTS horaire;
+DROP TABLE IF EXISTS Mesagerie;
 DROP TABLE IF EXISTS salle;
 DROP TABLE IF EXISTS journee, planning;
 DROP TABLE IF EXISTS activite;
@@ -150,7 +150,7 @@ CREATE TABLE statue(
 
 CREATE TABLE appartenir(
         email_uha       Varchar (25) ,
-        pass_uha        Varchar (25) ,
+        pass_uha        Varchar (32) ,
         frais_sport     Bool ,
         numero_personne Varchar (25) NOT NULL ,
         ref_campus      Varchar (25) ,
