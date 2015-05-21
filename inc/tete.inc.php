@@ -8,7 +8,9 @@
 </ul>
  
 </div>
-<div id="emptyspace"></div>
+<div id="emptyspace">
+<div id=linkpositioning><a href="../../web/connexion/">login</a></div>
+</div>
 <div id ="lowerpage">
   <table id ="lowerpage-column">
     <tbody>
