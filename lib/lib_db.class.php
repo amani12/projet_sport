@@ -110,7 +110,11 @@ class DB_connection
 	 {
 		@mysqli_close();
 	 }
-
+	public function DB_escape($string)
+	{
+		$this->result=mysqli_real_escape_string($this->_connection,$string);
+		return $this->result;
+	}
 }
 
 ?>

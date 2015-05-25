@@ -2,13 +2,8 @@
 require_once('../../inc/header.inc.php');
 require_once('../../inc/tete.inc.php');
 ?>
-<?php 
-$db = new DB_connection();
-$req="select * from activite where 1";
-$db->DB_query($req);
-?>
 <td  id="lowerpage-column-content">
-quides des activites physiques et sportifs:
+Projet pedagogique de 
 <br>
 <table>
 <?php

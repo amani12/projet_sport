@@ -41,10 +41,11 @@ CREATE TABLE Salle(
 CREATE TABLE Activite(
         ref_activite         Varchar (25) NOT NULL ,
         nom_activite         Varchar (25) ,
-        description_activite Text ,
+        description_activite Varchar(2000),
         nbre_fixe_heure      Int ,
         capacite_max         Int ,
         etat                 Bool ,
+		type_activite		 Varchar(25),
         numero_personne      Varchar (25) ,
 		date_premier_cours	Varchar (25),
         PRIMARY KEY (ref_activite )
@@ -313,3 +314,5 @@ ALTER TABLE peut_concerner ADD CONSTRAINT FK_peut_concerner_id_actualite FOREIGN
 
 
 
+INSERT INTO statue (code_statue,libelle_statue) VALUES (0,'etudiant');
+INSERT INTO statue (code_statue,libelle_statue) VALUES (1,'prof_sport');
