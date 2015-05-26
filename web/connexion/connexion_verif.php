@@ -12,9 +12,11 @@ $db = new DB_connection();
 				if($res->email_uha==$identifiant && $res->pass_uha==$password)
 				  {   $_SESSION["identifiant"] = $identifiant;
                       $_SESSION["password"] = $password;
+					  $_SESSION['isLogged']=true;
 					  header("Location:../../web/accueil/");  
 				  }else
 				   {
+					$_SESSION['isLogged']=false;
 					echo "mot de passe ou identifiant incorrect!!";  
 				   }
 			   }

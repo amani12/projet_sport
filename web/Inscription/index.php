@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!$_SESSION['isLogged']) {
+  header("location:http://localhost/projet_sport/web/connexion/"); 
+  die(); 
+}
 require_once('../../inc/header.inc.php');
 require_once('../../inc/tete.inc.php');
 ?>
@@ -7,6 +12,7 @@ require_once('../../inc/tete.inc.php');
 			<b>FICHE D'INSCRIPTION</b>
 			  <tr>
 			      <td>
+				  <form action="inscri2.php" method="POST">
 				  <table>
 				    <tr>
 					 <td>
@@ -15,6 +21,7 @@ require_once('../../inc/tete.inc.php');
 					 <td>
 					 <input type="text" name="nom"/>
 					 </td>
+					
 					</tr>
 					<tr>
 					 <td>
@@ -23,6 +30,7 @@ require_once('../../inc/tete.inc.php');
 					 <td>
 					 <input type="text" name="prenom"/><br><br>
 					 </td>
+					
 					</tr>
 					<tr>
 					 <td>
@@ -53,7 +61,7 @@ require_once('../../inc/tete.inc.php');
 					 <b>Ann&eacute;e d'&eacute;tudes:</b>
 					 </td>
 					 <td>
-					   <select>
+					   <select name="an">
 					                                   <option value="l1">1</option>
 													   <option value="l2">2</option>
                                                        <option value="l3">3</option>
@@ -75,12 +83,16 @@ require_once('../../inc/tete.inc.php');
 					  <b>Activit&eacute; principale:</b>
 					 </td>
 					 <td>
-					  <select>
+					                               <select  name="activPrinc">
 					                                   <option value="Badminton">Badminton</option>
                                                        <option value="Natation">Natation</option>
                                                        <option value="Volley-ball">Volley-ball</option>
                                                        <option value="PingPong">PingPong</option>
-                      </select><br><br>
+                                                   </select>
+												   <br><br>
+					 </td>
+					 <td>
+					 <input type="checkbox" name="note" value="note">not&eacute;e<br>
 					 </td>
 					</tr>
 					<tr>
@@ -88,29 +100,35 @@ require_once('../../inc/tete.inc.php');
 					 <b>Activit&eacute; de transfert:</b>
 					 </td>
 					 <td>
-					 <select>
+					                               <select name="activTransf">
 					                                  <option value="Badminton">Badminton</option>
                                                        <option value="Natation">Natation</option>
                                                        <option value="Volley-ball">Volley-ball</option>
                                                        <option value="PingPong">PingPong</option>
-                                                    </select><br><br>
+                                                    </select>
+													<br><br>
+					 </td>
+					 <td>
+					 <input type="checkbox" name="note1" value="note1">not&eacute;e<br>
 					 </td>
 					</tr>
-				  </table>
-				  
-				  
-				 
-				  
-				 
-				 
-                                                       
-				
-				 
-                                                       
-				   
-                                                       
-			      </td>
-				  <td>
+					<tr>
+					<td>
+					<b>Est ce que vous &ecirc;tes licenci&eacute; dans un club?
+					</td>
+					<td>
+					 <input type="checkbox" name="appartClub" value=1>Oui<br>
+                     
+					</td>
+					</tr>
+					<tr>
+					<td>
+					<br>
+					<input type=submit value="suivant"/>
+					</td>
+					</tr>
+				  </table>    
+                  </form>				  
 			      </td>
 			  </tr>
 			</table>
