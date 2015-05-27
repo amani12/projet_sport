@@ -164,6 +164,12 @@ $res1=$qi->DB_object();
  </td>
  </tr>
  </table>
+ <table id="prof_commentaire">
+ <td>
+ </td>
+ </table>
+  <table id="telechargement_des_pieces">
+ </table>
  </td>
       </tr>
     </tbody>
