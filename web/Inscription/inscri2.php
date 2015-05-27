@@ -21,7 +21,7 @@ $_SESSION['appartClub'] = $_POST['appartClub'];
 			<b>FICHE D'INSCRIPTION</b>
 			  <tr>
 			      <td>
-				  <form action="traitement.php" method ="post" enctype="multipart/form-data">
+				  <form name="frm" action="traitement.php" method ="post" enctype="multipart/form-data">
 				  <table>
 				  <tr>
 					  <td>
@@ -76,7 +76,18 @@ obligatoire pour les comp&eacute;titions FFSU(ou copie licence)
 			    <td>
 				<br>
 				 <br>
-			     <input type=submit value="submit"/>
+				 <script type="text/javascript">
+                                  function val(){
+
+                                           if(frm.eligibility.checked == false || frm.eligibility1.checked == false || frm.eligibility3.checked == false)
+                                              {
+	                                           alert('pourriez-vous agreer les termes de services!');
+	                                           return false;
+                                               }
+                                               return true;
+                                             }
+</script>
+			     <input type=submit value="submit" onclick="return val();"/>
 			  </td>
 			  </tr>
 			</table>

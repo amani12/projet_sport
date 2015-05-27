@@ -75,7 +75,7 @@ require_once('../../inc/tete.inc.php');
 					  <b>T&eacute;l&eacute;phone: </b>
 					 </td>
 					 <td>
-					  <input type="text" name="tel"/><br><br>
+					  <input type="tel" name="tel"/><br><br>
 					 </td>
 					</tr>
 					<tr>
