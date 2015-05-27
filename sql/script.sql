@@ -27,8 +27,8 @@ DROP TABLE IF EXISTS campus;
 #------------------------------------------------------------
 
 CREATE TABLE Salle(
-        ref_salle   Varchar (25) NOT NULL ,
-        nom_salle   Varchar (25) ,
+        ref_salle   Varchar (100) NOT NULL ,
+        nom_salle   Varchar (100) ,
         maintenance Bool ,
         PRIMARY KEY (ref_salle )
 )ENGINE=InnoDB;
@@ -39,15 +39,15 @@ CREATE TABLE Salle(
 #------------------------------------------------------------
 
 CREATE TABLE Activite(
-        ref_activite         Varchar (25) NOT NULL ,
-        nom_activite         Varchar (25) ,
+        ref_activite         Varchar (100) NOT NULL ,
+        nom_activite         Varchar (100) ,
         description_activite Varchar(2000),
         nbre_fixe_heure      Int ,
         capacite_max         Int ,
         etat                 Bool ,
-		type_activite		 Varchar(25),
-        numero_personne      Varchar (25) ,
-		date_premier_cours	Varchar (25),
+		type_activite		 Varchar(100),
+        numero_personne      Varchar (100) ,
+		date_premier_cours	Varchar (100),
         PRIMARY KEY (ref_activite )
 )ENGINE=InnoDB;
 
@@ -57,12 +57,12 @@ CREATE TABLE Activite(
 #------------------------------------------------------------
 
 CREATE TABLE Horaire(
-        heure_start  Varchar (25) ,
-        heure_fin    Varchar (25) ,
+        heure_start  Varchar (100) ,
+        heure_fin    Varchar (100) ,
         id           int (11) Auto_increment  NOT NULL ,
-        Date_journee Varchar (25) NOT NULL ,
-        ref_salle    Varchar (25) ,
-        ref_activite Varchar (25) ,
+        Date_journee Varchar (100) NOT NULL ,
+        ref_salle    Varchar (100) ,
+        ref_activite Varchar (100) ,
         PRIMARY KEY (id ,Date_journee )
 )ENGINE=InnoDB;
 
@@ -73,10 +73,10 @@ CREATE TABLE Horaire(
 
 CREATE TABLE reserve(
         description  Text ,
-        ref_salle    Varchar (25) NOT NULL ,
-        ref_activite Varchar (25) NOT NULL ,
+        ref_salle    Varchar (100) NOT NULL ,
+        ref_activite Varchar (100) NOT NULL ,
         id           Int ,
-        Date_journee Varchar (25) ,
+        Date_journee Varchar (100) ,
         PRIMARY KEY (ref_salle ,ref_activite )
 )ENGINE=InnoDB;
 
@@ -86,7 +86,7 @@ CREATE TABLE reserve(
 #------------------------------------------------------------
 
 CREATE TABLE Journee(
-        Date_journee Varchar (25) NOT NULL ,
+        Date_journee Varchar (100) NOT NULL ,
         etat_journee Bool ,
         id_planning  Int NOT NULL ,
         PRIMARY KEY (Date_journee ,id_planning )
@@ -99,9 +99,9 @@ CREATE TABLE Journee(
 
 CREATE TABLE planning(
         id_planning   int (11) Auto_increment  NOT NULL ,
-        nom_planning  Varchar (25) ,
-        date_de_debut Varchar (25) ,
-        date_de_fin   Varchar (25) ,
+        nom_planning  Varchar (100) ,
+        date_de_debut Varchar (100) ,
+        date_de_fin   Varchar (100) ,
         PRIMARY KEY (id_planning )
 )ENGINE=InnoDB;
 
@@ -111,8 +111,8 @@ CREATE TABLE planning(
 #------------------------------------------------------------
 
 CREATE TABLE campus(
-        ref_campus Varchar (25) NOT NULL ,
-        nom        Varchar (25) ,
+        ref_campus Varchar (100) NOT NULL ,
+        nom        Varchar (100) ,
         PRIMARY KEY (ref_campus )
 )ENGINE=InnoDB;
 
@@ -122,14 +122,14 @@ CREATE TABLE campus(
 #------------------------------------------------------------
 
 CREATE TABLE personnes(
-        numero_personne   Varchar (25) NOT NULL ,
-        nom               Varchar (25) ,
-        prenom            Varchar (25) ,
-        date_de_naissance Varchar (25) ,
-        photo             Varchar (25) ,
-        tel               Varchar (25) ,
-        email_perso       Varchar (25) ,
-        ref_niveau        Varchar (25) ,
+        numero_personne   Varchar (100) NOT NULL ,
+        nom               Varchar (100) ,
+        prenom            Varchar (100) ,
+        date_de_naissance Varchar (100) ,
+        photo             Varchar (100) ,
+        tel               Varchar (100) ,
+        email_perso       Varchar (100) ,
+        ref_niveau        Varchar (100) ,
         PRIMARY KEY (numero_personne )
 )ENGINE=InnoDB;
 
@@ -139,8 +139,8 @@ CREATE TABLE personnes(
 #------------------------------------------------------------
 
 CREATE TABLE statue(
-        code_statue    Char (25) NOT NULL ,
-        libelle_statue Varchar (25) ,
+        code_statue    Char (100) NOT NULL ,
+        libelle_statue Varchar (100) ,
         PRIMARY KEY (code_statue )
 )ENGINE=InnoDB;
 
@@ -150,24 +150,25 @@ CREATE TABLE statue(
 #------------------------------------------------------------
 
 CREATE TABLE appartenir(
-        email_uha       Varchar (25) ,
-        pass_uha        Varchar (32) ,
-        frais_sport     Bool ,
-        numero_personne Varchar (25) NOT NULL ,
-        ref_campus      Varchar (25) ,
-        code_statue     Char (25) ,
+        email_uha        Varchar (100) ,
+        pass_uha         Varchar (100) ,
+        frais_sport      Bool ,
+        photo_identite   Varchar (100) ,
+        photo_certificat Varchar (100) ,
+        numero_personne  Varchar (100) NOT NULL ,
+        ref_campus       Varchar (100) ,
+        code_statue      Char (100) ,
         PRIMARY KEY (numero_personne )
 )ENGINE=InnoDB;
-
 
 #------------------------------------------------------------
 # Table: niveau
 #------------------------------------------------------------
 
 CREATE TABLE niveau(
-        ref_niveau         Varchar (25) NOT NULL ,
+        ref_niveau         Varchar (100) NOT NULL ,
         nombre_heure_sport Int ,
-        ref_campus         Varchar (25) ,
+        ref_campus         Varchar (100) ,
         PRIMARY KEY (ref_niveau )
 )ENGINE=InnoDB;
 
@@ -178,7 +179,7 @@ CREATE TABLE niveau(
 
 CREATE TABLE actualite(
         id_actualite    int (11) Auto_increment  NOT NULL ,
-        titre           Varchar (25) ,
+        titre           Varchar (100) ,
         description_act Text ,
         PRIMARY KEY (id_actualite )
 )ENGINE=InnoDB;
@@ -189,8 +190,8 @@ CREATE TABLE actualite(
 #------------------------------------------------------------
 
 CREATE TABLE Mesagerie(
-        code_messagerie Varchar (25) NOT NULL ,
-        raison          Varchar (25) ,
+        code_messagerie Varchar (100) NOT NULL ,
+        raison          Varchar (100) ,
         contenue        Text ,
         PRIMARY KEY (code_messagerie )
 )ENGINE=InnoDB;
@@ -202,9 +203,9 @@ CREATE TABLE Mesagerie(
 
 CREATE TABLE Club(
         id_club         int (11) Auto_increment  NOT NULL ,
-        nom_club        Varchar (25) ,
-        activite        Varchar (25) ,
-        licence_fichier Varchar (25) ,
+        nom_club        Varchar (100) ,
+        activite        Varchar (100) ,
+        licence_fichier Varchar (100) ,
         PRIMARY KEY (id_club )
 )ENGINE=InnoDB;
 
@@ -214,13 +215,11 @@ CREATE TABLE Club(
 #------------------------------------------------------------
 
 CREATE TABLE pratiquer(
-        notee_ou_pas    Bool ,
-        note            Float ,
-        etat            Char (25) ,
-        numero_personne Varchar (25) NOT NULL ,
-        ref_activite    Varchar (25) NOT NULL ,
+        etat            Char (100) ,
+        numero_personne Varchar (100) NOT NULL ,
+        ref_activite    Varchar (100) NOT NULL ,
         id              Int NOT NULL ,
-        Date_journee    Varchar (25) NOT NULL ,
+        Date_journee    Varchar (100) NOT NULL ,
         PRIMARY KEY (numero_personne ,ref_activite ,id ,Date_journee )
 )ENGINE=InnoDB;
 
@@ -232,10 +231,10 @@ CREATE TABLE pratiquer(
 CREATE TABLE s_inscrire(
         etat_inscription Int ,
         notee_ou_pas     Bool ,
-        club             Varchar (25) ,
-        activite_club    Varchar (25) ,
-        numero_personne  Varchar (25) NOT NULL ,
-        ref_activite     Varchar (25) NOT NULL ,
+        principale       Bool ,
+        note             Float ,
+        numero_personne  Varchar (100) NOT NULL ,
+        ref_activite     Varchar (100) NOT NULL ,
         PRIMARY KEY (numero_personne ,ref_activite )
 )ENGINE=InnoDB;
 
@@ -245,7 +244,7 @@ CREATE TABLE s_inscrire(
 #------------------------------------------------------------
 
 CREATE TABLE concerner(
-        ref_activite Varchar (25) NOT NULL ,
+        ref_activite Varchar (100) NOT NULL ,
         id_actualite Int NOT NULL ,
         PRIMARY KEY (ref_activite ,id_actualite )
 )ENGINE=InnoDB;
@@ -256,8 +255,8 @@ CREATE TABLE concerner(
 #------------------------------------------------------------
 
 CREATE TABLE adresser(
-        numero_personne Varchar (25) NOT NULL ,
-        code_messagerie Varchar (25) NOT NULL ,
+        numero_personne Varchar (100) NOT NULL ,
+        code_messagerie Varchar (100) NOT NULL ,
         PRIMARY KEY (numero_personne ,code_messagerie )
 )ENGINE=InnoDB;
 
@@ -267,7 +266,7 @@ CREATE TABLE adresser(
 #------------------------------------------------------------
 
 CREATE TABLE licencier(
-        numero_personne Varchar (25) NOT NULL ,
+        numero_personne Varchar (100) NOT NULL ,
         id_club         Int NOT NULL ,
         PRIMARY KEY (numero_personne ,id_club )
 )ENGINE=InnoDB;
@@ -278,7 +277,7 @@ CREATE TABLE licencier(
 #------------------------------------------------------------
 
 CREATE TABLE peut_concerner(
-        code_messagerie Varchar (25) NOT NULL ,
+        code_messagerie Varchar (100) NOT NULL ,
         id_actualite    Int NOT NULL ,
         PRIMARY KEY (code_messagerie ,id_actualite )
 )ENGINE=InnoDB;
@@ -316,3 +315,16 @@ ALTER TABLE peut_concerner ADD CONSTRAINT FK_peut_concerner_id_actualite FOREIGN
 
 INSERT INTO statue (code_statue,libelle_statue) VALUES (0,'etudiant');
 INSERT INTO statue (code_statue,libelle_statue) VALUES (1,'prof_sport');
+INSERT INTO campus (ref_campus, nom) VALUES ('fst', 'faculte des sciences et de technologies');
+INSERT INTO campus (ref_campus, nom) VALUES ('ensisa', 'ecole');
+INSERT INTO campus (ref_campus, nom) VALUES ('IUT', '');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('L1info', '50', 'fst');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('L2info', '50', 'fst');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('L3info', '50', 'fst');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('M1info', '50', 'fst');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('M2info', '50', 'fst');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('A1', '25', 'ensisa');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('A2', '25', 'ensisa');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('A3', '25', 'ensisa');
+INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('B1', '50', 'IUT');
+INSERT INTO personnes (numero_personne, nom, prenom, date_de_naissance, photo, tel, email_perso, ref_niveau) VALUES ('21303586', 'younes', 'amani', '29/10/1990', NULL, '0641102810', 'amani.younes2@gmail.com', 'M1info');
