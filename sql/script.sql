@@ -205,7 +205,6 @@ CREATE TABLE Club(
         id_club         int (11) Auto_increment  NOT NULL ,
         nom_club        Varchar (100) ,
         activite        Varchar (100) ,
-        licence_fichier Varchar (100) ,
         PRIMARY KEY (id_club )
 )ENGINE=InnoDB;
 
@@ -268,6 +267,7 @@ CREATE TABLE adresser(
 CREATE TABLE licencier(
         numero_personne Varchar (100) NOT NULL ,
         id_club         Int NOT NULL ,
+		fichier_licence Varchar(100),
         PRIMARY KEY (numero_personne ,id_club )
 )ENGINE=InnoDB;
 
