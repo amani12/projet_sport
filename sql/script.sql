@@ -315,6 +315,7 @@ ALTER TABLE peut_concerner ADD CONSTRAINT FK_peut_concerner_id_actualite FOREIGN
 
 INSERT INTO statue (code_statue,libelle_statue) VALUES (0,'etudiant');
 INSERT INTO statue (code_statue,libelle_statue) VALUES (1,'prof_sport');
+INSERT INTO statue (code_statue,libelle_statue) VALUES (2,'directeur_sport');
 INSERT INTO campus (ref_campus, nom) VALUES ('fst', 'faculte des sciences et de technologies');
 INSERT INTO campus (ref_campus, nom) VALUES ('ensisa', 'ecole');
 INSERT INTO campus (ref_campus, nom) VALUES ('IUT', '');
@@ -328,3 +329,8 @@ INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('A2', '2
 INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('A3', '25', 'ensisa');
 INSERT INTO niveau (ref_niveau, nombre_heure_sport, ref_campus) VALUES ('B1', '50', 'IUT');
 INSERT INTO personnes (numero_personne, nom, prenom, date_de_naissance, photo, tel, email_perso, ref_niveau) VALUES ('21303586', 'younes', 'amani', '29/10/1990', NULL, '0641102810', 'amani.younes2@gmail.com', 'M1info');
+INSERT INTO personnes (numero_personne, nom, prenom, date_de_naissance, photo, tel, email_perso, ref_niveau) VALUES ('21303587', 'demuth', 'Xavier', '29/10/1990', NULL, '0641102810', 'amani.younes2@gmail.com', Null);
+INSERT INTO personnes (numero_personne, nom, prenom, date_de_naissance, photo, tel, email_perso, ref_niveau) VALUES ('21303588', 'matinya', 'raphael', '29/10/1990', NULL, '0641102810', 'amani.younes2@gmail.com', Null);
+INSERT INTO appartenir (email_uha, pass_uha, frais_sport, photo_identite, photo_certificat, numero_personne,ref_campus,code_statue) VALUES ('amani.younes@uha.fr', '50ba9916ab3b54f93012e6a2acb48230', '1','../../img/uploads/photo.jpg', NULL, '21303586', 'fst', '0');
+INSERT INTO appartenir (email_uha, pass_uha, frais_sport, photo_identite, photo_certificat, numero_personne,ref_campus,code_statue) VALUES ('xavier.demuth@uha.fr', '50ba9916ab3b54f93012e6a2acb48230', '1','../../img/uploads/photo.jpg', NULL, '21303587', NULL, '2');
+INSERT INTO appartenir (email_uha, pass_uha, frais_sport, photo_identite, photo_certificat, numero_personne,ref_campus,code_statue) VALUES ('raphael.matinya@uha.fr', '50ba9916ab3b54f93012e6a2acb48230', '1','../../img/uploads/photo.jpg', NULL, '21303588', NULL, '1');
