@@ -7,7 +7,7 @@ $db = new DB_connection();
                {
    				$identifiant=$_POST['identifiant'];
 			    $password=md5($_POST['password']);
-				$requete="SELECT `email_uha`,`pass_uha` FROM `appartenir` WHERE `email_uha`='".$identifiant."' or `pass_uha`='".$password."'";
+				$requete="SELECT * FROM `appartenir` WHERE `email_uha`='".$identifiant."' or `pass_uha`='".$password."'";
                 $db->DB_query($requete);
 				if($res=$db->DB_object())
 				{
@@ -24,6 +24,8 @@ $db = new DB_connection();
 						$_SESSION['nom']=$ligne->nom;
 						$_SESSION['prenom']=$ligne->prenom;
 						$_SESSION['nom']=$ligne->nom;
+						$_SESSION['niveau']=$ligne->ref_niveau;
+						
 						
 					  header("Location:../../web/accueil/");  
 				  }else
