@@ -320,3 +320,13 @@ border-bottom: 1px solid #63656b;
     padding: 0.5em 0 1em;
     text-align: center;
 }
+#etat {
+    background-color:  #ff0000;
+	 width: 10em;  
+	 height: 2em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    cursor: pointer;
+    border:none;
+}

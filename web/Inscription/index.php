@@ -7,9 +7,12 @@ if(!$_SESSION['isLogged']) {
 require_once('../../inc/header.inc.php');
 require_once('../../inc/tete.inc.php');
 ?>
+<?php
+if(true) {
+echo ' 
  <td  id="lowerpage-column-content">
 			<table>
-			<b>FICHE D'INSCRIPTION</b>
+			<b>FICHE D\'INSCRIPTION</b>
 			  <tr>
 			      <td>
 				  <form action="inscri2.php" method="POST">
@@ -58,7 +61,7 @@ require_once('../../inc/tete.inc.php');
 					</tr>
 					<tr>
 					 <td>
-					 <b>Ann&eacute;e d'&eacute;tudes:</b>
+					 <b>Ann&eacute;e d\'&eacute;tudes:</b>
 					 </td>
 					 <td>
 					   <select name="an">
@@ -136,7 +139,11 @@ require_once('../../inc/tete.inc.php');
       </tr>
     </tbody>
   </table>
-</div>
+</div> ';
+}else{
+	echo '<b> veuillez payez les frais de sport </b>';
+}
+?>
 
 <?php
 require_once('../../inc/footer.inc.php');

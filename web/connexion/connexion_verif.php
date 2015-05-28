@@ -23,8 +23,12 @@ $db = new DB_connection();
 						
 						$_SESSION['nom']=$ligne->nom;
 						$_SESSION['prenom']=$ligne->prenom;
+<<<<<<< HEAD
 						$_SESSION['nom']=$ligne->nom;
 						$_SESSION['niveau']=$ligne->ref_niveau;
+=======
+						$_SESSION['niv']=$ligne->ref_niveau;
+>>>>>>> 7e459150025b8bbd1e0a711b8aa9cae4ccde80c5
 						
 						
 					  header("Location:../../web/accueil/");  
