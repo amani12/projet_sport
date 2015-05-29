@@ -7,7 +7,7 @@ $db = new DB_connection();
                {
    				$identifiant=$_POST['identifiant'];
 			    $password=md5($_POST['password']);
-				$requete="SELECT * FROM `appartenir` WHERE `email_uha`='".$identifiant."' or `pass_uha`='".$password."'";
+				$requete="SELECT * FROM `appartenir` WHERE `email_uha`='".$identifiant."'";
                 $db->DB_query($requete);
 				if($res=$db->DB_object())
 				{
@@ -15,6 +15,7 @@ $db = new DB_connection();
 				  {   $_SESSION["identifiant"] = $identifiant;
                       $_SESSION["password"] = $password;
 					  $_SESSION["numero"] = $res->numero_personne;
+					  $_SESSION["e"]=$res->ref_campus;
 					  $_SESSION['isLogged']=true;
 						$req="select * from personnes where numero_personne='".$res->numero_personne ."'";
 						$db1 = new DB_connection();
@@ -23,11 +24,7 @@ $db = new DB_connection();
 						
 						$_SESSION['nom']=$ligne->nom;
 						$_SESSION['prenom']=$ligne->prenom;
-
-						$_SESSION['nom']=$ligne->nom;
 						$_SESSION['niveau']=$ligne->ref_niveau;
-
-						$_SESSION['niv']=$ligne->ref_niveau;
 						$_SESSION['frais']=$res->frais_sport;
 
 						

@@ -22,6 +22,17 @@
 								});
 	});
 	</script>
+	<script type="text/javascript">
+    function val(){
+
+    if(frm.eligibility.checked == false || frm.eligibility1.checked == false || frm.eligibility3.checked == false)
+        {
+	        alert('pourriez-vous agreer les termes de services!');
+	        return false;
+        }
+    return true;
+    }
+	</script>
 	
 	
 </head>
