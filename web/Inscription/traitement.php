@@ -1,24 +1,69 @@
 <?php
+require_once('../../inc/header.inc.php');
+?>
+<?php
 session_start();
-$_SESSION['activite'] = $_POST['activite'];
-$_SESSION['club'] = $_POST['club'];
-$_SESSION['eligibility'] = $_POST['eligibility'];
-$_SESSION['eligibility1'] = $_POST['eligibility1'];
-$_SESSION['eligibility3'] = $_POST['eligibility3'];
+$db=new DB_connection();
+if($_POST['activPrinc']!=null)
+{
+	
+	$req="insert into s_inscrire (ref_activite, numero_personne,principale,notee_ou_pas,note) Values('". $_POST['activPrinc'] ."','".$_SESSION['numero'] ."',1,";
+	if(isset($_POST['note'])!="note")
+	{
+		$req.="1,null)";
+	}
+	else
+	{
+		$req.="0,null)";
+	}
+	$db->DB_query($req);
+	
+	if($_POST['activTransf']!=null and $_POST['activPrinc']!=$_POST['activTransf'] )
+	{
+	$req="insert into s_inscrire (ref_activite, numero_personne,principale,notee_ou_pas,note) Values('". $_POST['activTransf'] ."','".$_SESSION['numero'] ."',0,";
+	if(isset($_POST['note1'])!=null)
+	{
+		$req.="1,null)";
+	}
+	else
+	{
+		$req.="0,null)";
+	}
+	$db->DB_query($req);
+	}
+	if($_POST['activite']!=null and $_POST['club']!=null )
+	{
+		$req="insert into club (nom_club,activite) Values('". $_POST['club'] ."','".$_POST['activite']."')";
+		$db->DB_query($req);
+		$id=$db->DB_id();
+		$req="insert into licencier (id_club,numero_personne) Values('". $id ."','".$_SESSION['numero']."')";
+		$db->DB_query($req);
+	}
+	if(!empty($_FILES['imgfile']['tmp_name']))
+	   {
+			move_uploaded_file ($_FILES['imgfile']['tmp_name'], 
+       "../../img/uploads/{$_FILES['imgfile'] ['name']}");
+	   $req="update appartenir set photo_identite='".$db->DB_escape('../../img/uploads/'.$_FILES['imgfile'] ['name'])."' where numero_personne='" . $_SESSION['numero']."'";
+	   $db->DB_query($req);
+			}
+			if(!empty($_FILES['imgfile1']['tmp_name']))
+	   {
+			move_uploaded_file ($_FILES['imgfile1']['tmp_name'], 
+       "../../img/uploads/{$_FILES['imgfile1'] ['name']}");
+	   $req="update appartenir set photo_cerificat='".$db->DB_escape('../../img/uploads/'.$_FILES['imgfile1'] ['name'])."' where numero_personne='" . $_SESSION['numero']."'";
+	   $db->DB_query($req);
+			}
+}
 
-if(isset($_POST['eligibility'])&&isset($_POST['eligibility1'])&&isset($_POST['eligibility3'])){
-if(isset($_POST['appartClub'])){
-	$_POST['appartClub']=1;
-	}else{
-	$_POST['appartClub']=0;	
-	}	
-move_uploaded_file ($_FILES['imgfile']['tmp_name'], 
+
+
+/*move_uploaded_file ($_FILES['imgfile']['tmp_name'], 
        "../../img/uploads/{$_FILES['imgfile'] ['name']}");
 	   
 move_uploaded_file ($_FILES['imgfile1']['tmp_name'], 
        "../../img/uploads/{$_FILES['imgfile1'] ['name']}");
 }else{
-}	
+}	*/
 
 
 
