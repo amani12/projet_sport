@@ -14,7 +14,7 @@ if($_POST['activPrinc']!=null)
 	}
 	else
 	{
-		$req.="0,null)";
+		$req.="0,null,1)";
 	}
 	$db->DB_query($req);
 	
@@ -27,7 +27,7 @@ if($_POST['activPrinc']!=null)
 	}
 	else
 	{
-		$req.="0,null)";
+		$req.="0,null,1)";
 	}
 	$db->DB_query($req);
 	}
@@ -50,7 +50,7 @@ if($_POST['activPrinc']!=null)
 	   {
 			move_uploaded_file ($_FILES['imgfile1']['tmp_name'], 
        "../../img/uploads/{$_FILES['imgfile1'] ['name']}");
-	   $req="update appartenir set photo_cerificat='".$db->DB_escape('../../img/uploads/'.$_FILES['imgfile1'] ['name'])."' where numero_personne='" . $_SESSION['numero']."'";
+	   $req="update appartenir set photo_certificat='".$db->DB_escape('../../img/uploads/'.$_FILES['imgfile1'] ['name'])."' where numero_personne='" . $_SESSION['numero']."'";
 	   $db->DB_query($req);
 			}
 			header("Location:../../web/accueil/");  
