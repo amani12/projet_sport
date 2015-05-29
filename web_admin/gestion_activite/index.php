@@ -11,7 +11,7 @@ $db->DB_query($req);
 <?php
 	if($ligne=$db->DB_object())
 	{
-	echo $ligne->ref_activite;
+	
 	echo'
 	
 	<tr><td>Ref</td><td>Nom</td><td>etat</td><td>Modifier</td><td>Supprimer</td></tr>';

@@ -7,10 +7,10 @@ $db=new DB_connection();
 if($_POST['activPrinc']!=null)
 {
 	
-	$req="insert into s_inscrire (ref_activite, numero_personne,principale,notee_ou_pas,note) Values('". $_POST['activPrinc'] ."','".$_SESSION['numero'] ."',1,";
+	$req="insert into s_inscrire (ref_activite, numero_personne,principale,notee_ou_pas,note,etat_inscription) Values('". $_POST['activPrinc'] ."','".$_SESSION['numero'] ."',1,";
 	if(isset($_POST['note'])!="note")
 	{
-		$req.="1,null)";
+		$req.="1,null,1)";
 	}
 	else
 	{
@@ -20,10 +20,10 @@ if($_POST['activPrinc']!=null)
 	
 	if($_POST['activTransf']!=null and $_POST['activPrinc']!=$_POST['activTransf'] )
 	{
-	$req="insert into s_inscrire (ref_activite, numero_personne,principale,notee_ou_pas,note) Values('". $_POST['activTransf'] ."','".$_SESSION['numero'] ."',0,";
+	$req="insert into s_inscrire (ref_activite, numero_personne,principale,notee_ou_pas,note,etat_inscription) Values('". $_POST['activTransf'] ."','".$_SESSION['numero'] ."',0,";
 	if(isset($_POST['note1'])!=null)
 	{
-		$req.="1,null)";
+		$req.="1,null,1)";
 	}
 	else
 	{
@@ -53,17 +53,13 @@ if($_POST['activPrinc']!=null)
 	   $req="update appartenir set photo_cerificat='".$db->DB_escape('../../img/uploads/'.$_FILES['imgfile1'] ['name'])."' where numero_personne='" . $_SESSION['numero']."'";
 	   $db->DB_query($req);
 			}
+			header("Location:../../web/accueil/");  
 }
 
 
-
-/*move_uploaded_file ($_FILES['imgfile']['tmp_name'], 
-       "../../img/uploads/{$_FILES['imgfile'] ['name']}");
-	   
-move_uploaded_file ($_FILES['imgfile1']['tmp_name'], 
-       "../../img/uploads/{$_FILES['imgfile1'] ['name']}");
-}else{
-}	*/
+else{
+echo 'votre inscription n\'est pas prise en compte';
+}	
 
 echo $_FILES['imgfile']['name'];
 
