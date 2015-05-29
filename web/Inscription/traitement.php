@@ -20,7 +20,7 @@ move_uploaded_file ($_FILES['imgfile1']['tmp_name'],
 }else{
 }	
 
-
+echo $_FILES['imgfile']['name'];
 
 
 
