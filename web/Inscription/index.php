@@ -130,7 +130,7 @@ echo '
 					<b> T&eacute;l&eacute;charger votre <br> photo d\'identi&eacute;</b>
 					 </td>
 					 <td>
-					 <input type="file" name="imgfile">
+					 <input type="file" name="imgfile" accept="image/png,image/gif,image/jpeg,image/pjpeg">
 					 </td>
 					</tr>
 					<tr>
@@ -138,7 +138,7 @@ echo '
 					 <b> T&eacute;l&eacute;charger votre <br> quittance;</b>
 					 </td>
 					 <td>
-					 <input type="file" name="imgfile1">
+					 <input type="file" name="imgfile1" accept="image/png,image/gif,image/jpeg,image/pjpeg">
 					 </td>
 					</tr>
 					    </table>
@@ -159,7 +159,7 @@ obligatoire pour les comp&eacute;titions FFSU(ou copie licence)
 <table>
 			<tr>
 					<td>
-					<input type=submit value="submit" onclick="return val();"/>
+					<input type=submit value="submit" onclick="return val();" />
 					
 					</td>
 					</tr>
