@@ -9,6 +9,7 @@ require_once('../../inc/tete.inc.php');
 ?>
 <?php
 if(true) {
+
 echo ' 
  <td  id="lowerpage-column-content">
 			<form name="frm" action="traitement.php" method ="post" enctype="multipart/form-data">
