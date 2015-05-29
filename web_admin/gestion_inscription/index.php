@@ -6,9 +6,10 @@ function prepa_activite($num)
 		$db2=new DB_connection();
 		$req2="select ref_activite,principale from s_inscrire where numero_personne='".$num ."' and etat_inscription=1";
 		$db2->DB_query($req2);
+		$activite[0]=$activite[1]=null;
 		while($ligne2=$db2->DB_object())
 		{
-			$activite[0]=$activite[1]=null;
+			
 			$db3=new DB_connection();
 			$req3="select nom_activite from activite where ref_activite='".$ligne2->ref_activite ."'";
 			$db3->DB_query($req3);
@@ -29,7 +30,7 @@ return $activite;
 
 <?php
 $db=new DB_connection();
-$req="select * from s_inscrire where etat_inscription=1 ";
+$req="select distinct numero_personne from s_inscrire where etat_inscription=1 ";
 $db->DB_query($req);
 ?>
 <table>
