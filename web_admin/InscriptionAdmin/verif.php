@@ -15,7 +15,7 @@ session_start();
          			  $_SESSION["ident"] = $ident;
                       $_SESSION["pass"] = $mdp;
 					  $_SESSION["numero"] = $res->numero_personne;
-					  $_SESSION['isLogged']=true;
+					  $_SESSION['isLoggedAdmin']=true;
 					  $_SESSION['statue']=$res->code_statue;
 					    $req="select * from personnes where numero_personne='".$res->numero_personne ."'";
 						$db1 = new DB_connection();
@@ -27,15 +27,15 @@ session_start();
 					  $_SESSION['frais']=$res->frais_sport;
                         header("Location:../../web_admin/AccueilAdmin/");  
 				    }else{
-					      $_SESSION['isLogged']=false;
+					      $_SESSION['isLoggedAdmin']=false;
 					      echo "Vous n'avez par les droits necessaires pour acceder a cette Page!!";  
 						 }
 			    }else{
-					  $_SESSION['isLogged']=false;
+					  $_SESSION['isLoggedAdmin']=false;
 					  echo "mot de passe ou identifiant incorrect!!";  
 				    }
 			}else{
-				  $_SESSION['isLogged']=false;
+				  $_SESSION['isLoggedAdmin']=false;
 				  echo "mot de passe ou identifiant incorrect!!";  
 				}
 	    }
