@@ -11,7 +11,7 @@
  <body>
  <div id="inscription">
     <table id="login_table">
-       <form action="loginadmin.php" method="POST">
+       <form action="verif.php" method="POST">
 		  <tr>
 			<td>
 			  <b><p style="color:#185dc6;">Identifiant :</p></b>
