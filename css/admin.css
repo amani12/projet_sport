@@ -1,0 +1,89 @@
+#admin_header{
+    width:1000px;
+	height:170px;
+	margin:auto;
+	background-position:center;
+	background-image:url(../img/logo1.jpg );
+	background-repeat:no-repeat;
+	
+}
+
+body {
+    background-color: White;
+    color: Black;
+    font: 69% Futura,Arial,"Lucida Grande",Verdana,Lucida,Helvetica,sans-serif;
+	font-size:0.9em;
+    margin: 0;
+    padding: 0;
+}
+
+a { 
+    margin: 0;  
+	text-decoration: none;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:20px;
+	font-weight: bold;
+	display:block;
+    background-color: transparent;
+    color: #185dc6;
+}
+#admin_lowerpage {
+	width:1000px;
+	margin:auto;
+	background-position:center;
+    background-color: transparent;
+    margin-left:9% ;
+	height:auto;
+    padding:0;
+}
+#navigation {
+ 
+    border-collapse: collapse;
+    vertical-align: top;
+    width: 250;
+    padding: 1em;
+	
+	font-family: Cursive;
+	font-size:20px;
+	color:#333300;
+}
+#contents {
+ 
+    border-collapse: collapse;
+    vertical-align: top;
+    width:708px;
+    padding: 1em;
+	font-family: Cursive;
+	font-size:20px;
+	color: #185dc6;
+	
+}
+#inscription{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -40px;
+    width: 300px;
+    height: 300px;
+}​
+#footer {
+ 
+    border-collapse: collapse;
+    vertical-align: top;
+    width:1000px;
+    padding: 1em;
+
+}
+
+#haha{
+	border-width:0px 3px 0px 0px;
+	border-style:solid;
+	border-color: #185dc6;
+	padding:0 10px;
+	/*font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;*/
+	
+	border-collapse: collapse;
+	}
