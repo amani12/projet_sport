@@ -23,8 +23,7 @@ session_start();
 						$ligne=$db1->DB_object();
 					  $_SESSION['nom']=$ligne->nom;
 					  $_SESSION['prenom']=$ligne->prenom;
-					  $_SESSION['niveau']=$ligne->ref_niveau;
-					  $_SESSION['frais']=$res->frais_sport;
+					  
                         header("Location:../../web_admin/AccueilAdmin/");  
 				    }else{
 					      $_SESSION['isLoggedAdmin']=false;

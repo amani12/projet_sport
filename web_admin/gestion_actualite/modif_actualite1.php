@@ -13,5 +13,5 @@ foreach($_POST['activite'] as $valeur)
    $req="insert into concerner (id_actualite,ref_activite)Values('".$id ."','".$valeur ."')";
    $db->DB_query($req);
 }
-
+header("Refresh:0;url=index.php");
 ?>

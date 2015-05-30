@@ -15,5 +15,5 @@ $req="delete  from s_inscrire where ref_activite='".$ref ."'";
 $db->DB_query($req);
 $req="delete from activite where ref_activite='".$ref ."'";
 $db->DB_query($req);
-
+header("Refresh:0;url=index.php");
 ?>
