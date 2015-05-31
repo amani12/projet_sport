@@ -7,5 +7,5 @@ $db1=new DB_connection();
 $req="update salle set nom_salle='".$db1->DB_escape($_POST['nom']) ."' where ref_salle='".$ref ."'";
 $db->DB_query($req);
 
-
+//header("Refresh:0;url=index.php");
 ?>
