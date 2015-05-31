@@ -8,6 +8,7 @@
 		<b><p style="color:#185dc6;font-size:20px" align="center">PAGE DE L'ADMINSTRATEUR </p></b>
 	  </div>
   </head>
+  
   <body>
 	<div id="admin_lowerpage">
 	   <table>
@@ -40,7 +41,11 @@
 							    <a href="../gestion_salle/"  title="">Gestion des salle</a>
 							 </td>
 						   </tr>
-						   
+						   <tr>
+						     <td>
+							    <a href="../gestion_seance/"  title="">Gestion des seances</a>
+							 </td>
+						   </tr>
 					   </table>
 					</div>
 				</td>
