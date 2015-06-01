@@ -23,19 +23,25 @@ session_start();
 						$ligne=$db1->DB_object();
 					  $_SESSION['nom']=$ligne->nom;
 					  $_SESSION['prenom']=$ligne->prenom;
-					  
+					  $_SESSION['niveau']=$ligne->ref_niveau;
+					  $_SESSION['frais']=$res->frais_sport;
+					  $_SESSION['error_admin']=false;
+
                         header("Location:../../web_admin/AccueilAdmin/");  
 				    }else{
 					      $_SESSION['isLoggedAdmin']=false;
-					      echo "Vous n'avez par les droits necessaires pour acceder a cette Page!!";  
+						  $_SESSION['error']=true;
+					      header("location:http://localhost/projet_sport/web_admin/connexion_admin/");
 						 }
 			    }else{
 					  $_SESSION['isLoggedAdmin']=false;
-					  echo "mot de passe ou identifiant incorrect!!";  
+					  $_SESSION['error_admin']=true;
+                      header("location:http://localhost/projet_sport/web_admin/connexion_admin/");					  
 				    }
 			}else{
 				  $_SESSION['isLoggedAdmin']=false;
-				  echo "mot de passe ou identifiant incorrect!!";  
+				  $_SESSION['error_admin']=true;
+                  header("location:http://localhost/projet_sport/web_admin/connexion_admin/");				  
 				}
 	    }
 ?>

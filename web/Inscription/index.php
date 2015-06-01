@@ -1,11 +1,10 @@
 <?php
-session_start();
+require_once('../../inc/header.inc.php');
+require_once('../../inc/tete.inc.php');
 if(!$_SESSION['isLogged']) {
   header("location:http://localhost/projet_sport/web/connexion/"); 
   die(); 
 }
-require_once('../../inc/header.inc.php');
-require_once('../../inc/tete.inc.php');
 ?>
 <?php
 if(true) {

@@ -15,6 +15,7 @@ $db->DB_query($requete);
 			<table id="column-content-table">
 			 <tr>
 			    <td>
+				  <?php   if(isset($_SESSION['error'])===true){ echo '<p style="color:#FA0831;">mot de passe ou identifiant non valid!!</p>';}?>
 				  <form action="connexion_verif.php" method="post">
 				  <b>Identifiant</b><br>
 				  <input type="text" name="identifiant"><br><br><br>
@@ -24,7 +25,7 @@ $db->DB_query($requete);
 				  
 				  <input type="submit" value="login">
 				  </form>
-				  
+				  <p style="color:#185dc6;">
 				</td>
 			 </tr>
 			</table>

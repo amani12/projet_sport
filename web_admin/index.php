@@ -6,6 +6,6 @@ if($_SESSION['isLoggedAdmin']==true)
 else
 {
 
-	header("Location: InscriptionAdmin/");
+	header("Location: connexion_admin/");
 }
 ?>

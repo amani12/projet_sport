@@ -7,6 +7,45 @@
 	background-repeat:no-repeat;
 	
 }
+#emptyspace {
+	position:absolute;
+	top:150px;
+    width:1000px;
+	height:18px;
+	background-color:#ffdb42;
+	background-position:center;
+	background-repeat:no-repeat;
+	margin-left:13.3%;
+	
+    	      
+}
+
+#emptyspace a{
+text-decoration: none;
+font-size:1em;
+}
+
+#deconnexion_ad{
+position:absolute;
+margin-left:82%;
+width:90px;
+
+}
+
+#connexion_ad{
+position:absolute;
+margin-left:93%;
+width:66px;
+
+}
+
+#info_utilisateur_ad{
+position:absolute;
+margin-left:0%;
+width:200px;
+
+
+}
 
 body {
     background-color: White;
@@ -60,6 +99,17 @@ a {
 	
 }
 
+#inscription{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -40px;
+    width: 300px;
+    height: 300px;
+	
+}​
+
 #choix{
     position: absolute;
     top: 30%;
@@ -82,15 +132,7 @@ a {
 	background-color:red;
 
 }​
-#inscription{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -40px;
-    width: 300px;
-    height: 300px;
-}​
+
 
 
 #footer {

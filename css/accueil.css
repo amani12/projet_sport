@@ -166,15 +166,33 @@ font-weight: bold;
 #emptyspace {
 	
     width:1000px;
-	height:15px;
+	height:18px;
 	background-color:#ffdb42;
 	margin:auto;
 	background-position:center;
 	background-repeat:no-repeat;
     	      
 }
-#linkpositioning{
-margin-left:96%;
+#deconnexion{
+position:absolute;
+top:101px;
+margin-left:64%;
+width:90px;
+}
+
+#connexion{
+position:absolute;
+top:101px;
+margin-left:71%;
+width:38px;
+}
+
+#info_utilisateur{
+position:absolute;
+top:101px;
+margin-left:0%;
+width:200px;
+
 }
 
 #section {
