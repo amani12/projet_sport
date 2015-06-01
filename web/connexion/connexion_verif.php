@@ -26,6 +26,7 @@ $db = new DB_connection();
 						$_SESSION['prenom']=$ligne->prenom;
 						$_SESSION['niveau']=$ligne->ref_niveau;
 						$_SESSION['frais']=$res->frais_sport;
+						$_SESSION['error']=false;
 
 						
 						
@@ -33,13 +34,17 @@ $db = new DB_connection();
 				  }else
 				   {
 					$_SESSION['isLogged']=false;
-					echo "mot de passe ou identifiant incorrect!!";  
+					$_SESSION['error']=true;
+					header("location:http://localhost/projet_sport/web/connexion/");
+                				
 				   }
 			   }
 			   else
 			   {
 					$_SESSION['isLogged']=false;
-					echo "mot de passe ou identifiant incorrect!!";  
+					$_SESSION['error']=true; 
+					header("location:http://localhost/projet_sport/web/connexion/");
+                      					
 			   }
 			   }
 ?>

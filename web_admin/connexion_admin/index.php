@@ -7,10 +7,14 @@
 	  <div id="admin_header">
 		<b><p style="color:#185dc6;font-size:20px" align="center">PAGE DE L'ADMINSTRATEUR </p></b>
 	  </div>
+	  <div id="emptyspace">
+	  
+	  </div>
   </head>
  <body>
  <div id="inscription">
     <table id="login_table">
+	     <?php  session_start(); if(isset($_SESSION['error_admin'])===true){ echo '<p style="color:#FA0831;">mot de passe ou identifiant non valid!!</p>';}?>
        <form action="verif.php" method="POST">
 		  <tr>
 			<td>

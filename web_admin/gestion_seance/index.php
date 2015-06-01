@@ -79,7 +79,7 @@ require_once('../../inc/teteadmin.inc.php');
                              </div>
 							 <div>
 							 
-							    <form action="http://google.com">
+							    <form action="">
                                      <input type="submit" value="Ajouter une seance">
                                  </form>
 							 </div>
