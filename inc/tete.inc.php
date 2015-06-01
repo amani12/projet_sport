@@ -9,7 +9,7 @@
  
 </div>
 <div id="emptyspace">
-<div id=linkpositioning><a href="../../web/connexion/">login</a></div>
+<div id="info_utilisateur"><?php  session_start(); if( isset($_SESSION['isLogged'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><div id="deconnexion"><a href="../connexion/deconnexion.php" >deconnexion</a></div><div id="connexion"><a href="../connexion">login</a></div>
 </div>
 <div id ="lowerpage">
   <table id ="lowerpage-column">
@@ -43,7 +43,7 @@
 
     <div class="visualIcon contenttype-folder">
         
-        <a href="../contrat_pedagogique/" class="state-published visualIconPadding" title="">Inscription</a>
+        <a href="../Inscription/" class="state-published visualIconPadding" title="">Inscription</a>
         
     </div>
 
@@ -74,7 +74,7 @@
 
     <div class="visualIcon contenttype-folder">
         
-        <a href="" class="state-published visualIconPadding" title="">Projet Pedagogique</a>
+        <a href="../projet_pedagogique/" class="state-published visualIconPadding" title="">Projet Pedagogique</a>
         
     </div>
 
@@ -89,7 +89,7 @@
 
     <div class="visualIcon contenttype-folder">
         
-        <a href="http://www.uha.fr/research" class="state-published visualIconPadding" title="">Emplois du temps</a>
+        <a href="../guide_activite/" class="state-published visualIconPadding" title="">Emplois du temps</a>
         
     </div>
 

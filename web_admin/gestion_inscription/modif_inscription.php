@@ -1,6 +1,8 @@
 <?php
 require_once('../../inc/header.inc.php');
-echo '<form method="post" action="modif_inscription1.php?num='.$_GET['num'].'">';
+require_once('../../inc/teteadmin.inc.php');
+
+echo '<td><form method="post" action="modif_inscription1.php?num='.$_GET['num'].'">';
 $db=new DB_connection();
 
 $req="select * from s_inscrire where numero_personne='".$_GET['num']."' and etat_inscription=1";
@@ -66,6 +68,8 @@ while($res2=$db2->DB_object())
 
 echo '</select> <input type="checkbox" name="no1"';
 if($notee==1) {echo 'checked';}
-echo' value="n">Notee <input type="submit" name"submit"></form>';
+echo' value="n">Notee <input type="submit" name"submit"></form></td>
+			</tr>
+	   </table>';
 
 ?>

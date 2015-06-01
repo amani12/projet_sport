@@ -23,9 +23,13 @@ session_start();
 						$ligne=$db1->DB_object();
 					  $_SESSION['nom']=$ligne->nom;
 					  $_SESSION['prenom']=$ligne->prenom;
+<<<<<<< HEAD
 					  $_SESSION['niveau']=$ligne->ref_niveau;
 					  $_SESSION['frais']=$res->frais_sport;
 					  $_SESSION['error_admin']=false;
+=======
+					  
+>>>>>>> 3cc18052543f3fc02fa3de4c59668552b87339b8
                         header("Location:../../web_admin/AccueilAdmin/");  
 				    }else{
 					      $_SESSION['isLoggedAdmin']=false;

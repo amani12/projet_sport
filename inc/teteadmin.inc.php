@@ -11,6 +11,7 @@
 	  <div id="info_utilisateur_ad"><?php   if( isset($_SESSION['isLoggedAdmin'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><div id="deconnexion_ad"><a href="../../web_admin/connexion_admin/deconn.php">deconnexion</a></div><div id="connexion_ad"><a href="../../web_admin/connexion_admin">connexion</a></div>
 	  </div>
   </head>
+  
   <body>
 	<div id="admin_lowerpage">
 	   <table>
@@ -43,7 +44,11 @@
 							    <a href="../gestion_salle/"  title="">Gestion des salle</a>
 							 </td>
 						   </tr>
-						   
+						   <tr>
+						     <td>
+							    <a href="../gestion_seance/"  title="">Gestion des seances</a>
+							 </td>
+						   </tr>
 					   </table>
 					</div>
 				</td>

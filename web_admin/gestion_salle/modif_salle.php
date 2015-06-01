@@ -1,5 +1,6 @@
 <?php
 require_once('../../inc/header.inc.php');
+require_once('../../inc/teteadmin.inc.php');
 ?>
 <?php
 	$ref=$_GET['ref'];
@@ -9,13 +10,13 @@ require_once('../../inc/header.inc.php');
 	$ligne=$db->DB_object();
 ?>
 <?php
-echo '
-<form action="modif_salle1.php" method="post">
+echo '<td><table>
+<form action="modif_salle1.php?ref='.$ligne->ref_salle .'" method="post">
+	<tr><td>
+	Nom:</td><td> <input type="text" name="nom" value="'. $ligne->nom_salle .'"required></td></tr><tr>';
 	
-	Nom:<br> <input type="text" name="nom" value="'. $ligne->nom_salle .'"required>';
-	
-	echo '<input type="submit" name="okkkk"><br>';
-	echo '</form>';
+	echo '<td><input type="submit" name="okkkk"></td><td></td></tr>';
+	echo '</form></table></td></tr></table>';
 
 
 ?>

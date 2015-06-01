@@ -105,5 +105,6 @@ if(isset($_POST['no1']))
 	$db2->DB_query($req2);
 	}
 	}
+header("Refresh:0;url=index.php");
 
 ?>

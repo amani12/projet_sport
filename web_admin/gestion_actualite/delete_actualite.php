@@ -8,5 +8,5 @@ $db->DB_query($req);
 
 $req="delete from actualite where id_actualite='".$id ."'";
 $db->DB_query($req);
-
+header("Refresh:0;url=index.php");
 ?>

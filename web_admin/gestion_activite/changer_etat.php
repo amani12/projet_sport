@@ -15,5 +15,5 @@ $req.="0' where ref_activite='".$ref ."'";
 }
 $db->DB_query($req);
 
-
+header("Refresh:0;url=index.php");
 ?>

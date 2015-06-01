@@ -1,5 +1,7 @@
 <?php
 require_once('../../inc/header.inc.php');
+require_once('../../inc/teteadmin.inc.php');
+
 function prepa_activite($num)
 {
 		
@@ -33,10 +35,11 @@ $db=new DB_connection();
 $req="select distinct numero_personne from s_inscrire where etat_inscription=1 ";
 $db->DB_query($req);
 ?>
-<table>
+
 <?php
 	echo'
-	
+	<td>
+	<table width="600">
 	<tr><td>Nom Prenom</td><td>activite Principale</td><td>activite Transfert</td><td>Modifier</td><td>Notifier</td></tr>';
 	
 	while($ligne=$db->DB_object())
@@ -55,3 +58,6 @@ $db->DB_query($req);
 	
 	?>
 </table>
+</td>
+			</tr>
+	   </table>
