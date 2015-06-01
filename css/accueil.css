@@ -202,12 +202,19 @@ width:200px;
 }
 
 #lowerpage {
+
+   /* changes made
+    * I added position attribute
+	* removed margin :auto
+	*  margin-left from 9->12
+	*/
+    position:relative;
+	margin-left:12% ;
 	width:1000px;
-	margin:auto;
 	background-position:center;
     background-color: transparent;
-    margin-left:9% ;
-	height:500px;
+	/*height:500px;*/
+	height:auto;
     padding:0;
 }
 #lowerpage-columns {
@@ -233,6 +240,13 @@ width:200px;
   border-right: 1px solid #63656b;
   border-top: 1px solid #63656b;
   border-bottom: 1px solid #63656b;*/
+}
+
+#lowerpage-column-content {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
 }
 
 tr.dragging td {
@@ -317,24 +331,17 @@ border-bottom: 1px solid #63656b;
 
 }
 
-#lowerpage-column-content {
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-    vertical-align: top;
-}
+
 
 #lowerpage-footer {
-    background-color: #fffff;
-	width:1100px;
+    position:absolute;
+	width:1000px;
 	height:18px;
-	position:relative;
-	 margin-left:9% ;
-    border-bottom: 1px solid #63656b;
-    /*border-top: 1px solid #63656b;*/
+	margin-left:9% ;
+	margin-top:10px;
+    background-color: #fffff;
     float: none;
     line-height: 1.2em;
-    /*margin: 2em 0 1em;*/
     padding: 0.5em 0 1em;
     text-align: center;
 }

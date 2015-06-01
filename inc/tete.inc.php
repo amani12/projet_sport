@@ -9,7 +9,7 @@
  
 </div>
 <div id="emptyspace">
-<div id="info_utilisateur"><?php  session_start(); if( isset($_SESSION['isLogged'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><div id="deconnexion"><a href="../connexion/deconnexion.php" >deconnexion</a></div><div id="connexion"><a href="../connexion">login</a></div>
+<div id="info_utilisateur"><?php   if( isset($_SESSION['isLogged'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><div id="deconnexion"><a href="../connexion/deconnexion.php" >deconnexion</a></div><div id="connexion"><a href="../connexion">login</a></div>
 </div>
 <div id ="lowerpage">
   <table id ="lowerpage-column">

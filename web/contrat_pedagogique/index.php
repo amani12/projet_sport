@@ -6,6 +6,7 @@ require_once('../../inc/tete.inc.php');
 		 
 		 
 		 <td  id="lowerpage-column-content">
+		 <br><br>
 			<h1>Contrat Pédagogique pour l'option LMD "Sport"<h1>
 			
 			L'UE  « pratique des activités physiques, sportives et de plein air » ou « sport » fait partie des UE libres de l'université de Haute-Alsace.

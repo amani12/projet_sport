@@ -8,7 +8,8 @@ $req="select * from activite where 1";
 $db->DB_query($req);
 ?>
 <td  id="lowerpage-column-content">
-quides des activites physiques et sportifs:
+<br><br>
+Guides des activites physiques et sportifs:
 <br>
 <table>
 <?php

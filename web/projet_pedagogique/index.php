@@ -1,10 +1,12 @@
 <?php
-require_once('../../inc/header.inc.php');
-require_once('../../inc/tete.inc.php');
-if(!$_SESSION['isLogged']) {
+session_start();
+if(isset($_SESSION['isLogged'])===false) {
   header("location:http://localhost/projet_sport/web/connexion/"); 
   die(); 
 }
+require_once('../../inc/header.inc.php');
+require_once('../../inc/tete.inc.php');
+
 
 $q1 = new DB_connection();
  $query_identite="SELECT * FROM `appartenir` WHERE `numero_personne`='".$_SESSION['numero']."'";
@@ -44,6 +46,7 @@ $q6->DB_query($query_activite_infos);
 $res6=$q6->DB_object();	
 ?>
 <td  id="lowerpage-column-content">
+<br><br>
 <table id="titre_proj_peda">
    <tr>
       <td>

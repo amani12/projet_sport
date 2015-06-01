@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once('../../inc/header.inc.php');
 require_once('../../inc/tete.inc.php');
 
@@ -13,6 +13,7 @@ $db->DB_query($requete);
 		 
 		 
 		 <td  id="lowerpage-column-content">
+		    <br><br>
 			<table id="column-content-table">
 			 <tr>
 			    <td>

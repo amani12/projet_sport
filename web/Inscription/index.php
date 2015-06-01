@@ -1,16 +1,17 @@
 <?php
-require_once('../../inc/header.inc.php');
-require_once('../../inc/tete.inc.php');
-if(!$_SESSION['isLogged']) {
+session_start();
+if(isset($_SESSION['isLogged'])===false) {
   header("location:http://localhost/projet_sport/web/connexion/"); 
   die(); 
 }
+require_once('../../inc/header.inc.php');
+require_once('../../inc/tete.inc.php');
 ?>
 <?php
 if(true) {
 
 echo ' 
- <td  id="lowerpage-column-content">
+ <td  id="lowerpage-column-content"><br><br>
 			<form name="frm" action="traitement.php" method ="post" enctype="multipart/form-data">
 			<b>FICHE D\'INSCRIPTION</b>
 			<table>
