@@ -1,5 +1,5 @@
 <?php
-//require_once('../../../inc/header.inc.php');
+require_once('../../../inc/header.inc.php');
 require_once('../../../inc/teteadmin.inc.php');
 $db=new DB_connection();
 $req="select * from reserve where ref_activite='".$_GET['ref']."' and date_journee >= ".date();

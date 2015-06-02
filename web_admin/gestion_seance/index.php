@@ -20,7 +20,7 @@ echo'	<td>
 					<td>Nom_activite</td><td>Modifier les horaires</td><td>Presence</td></tr>';
 					while($res=$db->DB_object())
 					{
-						echo '<td>'.$res->nom_activite .'</td><td><a href="modifier_seance/?ref='.$res->ref_activite .'">Modifier les horaires</a></td><td>Presence</td></tr>';
+						echo '<td>'.$res->nom_activite .'</td><td><a href="modifier_seance.php?ref='.$res->ref_activite .'">Modifier les horaires</a></td><td>Presence</td></tr>';
 					}
 	echo '			</table>
 	</div>
