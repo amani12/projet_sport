@@ -22,15 +22,17 @@ echo '
 					 <td>
 					 <input type="text" name="nom" value="'.$_SESSION['nom'] .'" readonly/>
 					 </td>
-
+					</tr> 
+                   <tr>
+				   
 					 <td>
 					 <b>Prenom: </b>
 					 </td>
 					 <td>
 					 <input type="text" name="prenom" value="'.$_SESSION['prenom'] .'" readonly/><br><br>
 					 </td>
-					
 					</tr>
+					
 					<tr>
 					 <td>
 					 <b>NumEtudiants: </b>

@@ -8,7 +8,7 @@
 		<b><p style="color:#185dc6;font-size:20px" align="center">PAGE DE L'ADMINSTRATEUR </p></b>
 	  </div>
 	   <div id="emptyspace">
-	  <div id="info_utilisateur_ad"><?php  session_start(); if( isset($_SESSION['isLoggedAdmin'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><div id="deconnexion_ad"><a href="../../web_admin/connexion_admin/deconn.php">deconnexion</a></div><div id="connexion_ad"><a href="../../web_admin/connexion_admin">connexion</a></div>
+	  <div id="info_utilisateur_ad"><?php  session_start(); if( isset($_SESSION['isLoggedAdmin'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><?php if(isset($_SESSION['isLoggedAdmin'])===true){ echo '<div id="deconnexion_ad"><a href="../../web_admin/connexion_admin/deconn.php">deconnexion</a></div>';}else{ echo '<div id="connexion_ad"><a href="../../web_admin/connexion_admin">connexion</a></div>';}?>
 	  </div>
   </head>
   

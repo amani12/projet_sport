@@ -93,7 +93,7 @@ $res6=$q6->DB_object();
 		<img src="<?php  echo $res1->photo_identite;?>" alt="Smiley face" width="80" height="80">
 		</td>
          <td>
-		<img src="<?php  echo $res1->photo_identite;?>" alt="Smiley face" width="200" height="80">
+		<img src="<?php  echo $res1->photo_certificat;?>" alt="Smiley face" width="200" height="80">
 		</td>
     </tr>
  </table >
