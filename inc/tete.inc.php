@@ -9,13 +9,13 @@
  
 </div>
 <div id="emptyspace">
-<div id="info_utilisateur"><?php   if( isset($_SESSION['isLogged'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><div id="deconnexion"><a href="../connexion/deconnexion.php" >deconnexion</a></div><div id="connexion"><a href="../connexion">login</a></div>
+<div id="info_utilisateur"><?php   if( isset($_SESSION['isLogged'])===true){ echo "Bienvenue ".$_SESSION["nom"]." ".$_SESSION['prenom'];}?></div><?php if(isset($_SESSION['isLogged'])===true){ echo '<div id="deconnexion"><a href="../connexion/deconnexion.php" >deconnexion</a></div>';}else{ echo '<div id="connexion"><a href="../connexion">login</a></div>';}?>
 </div>
 <div id ="lowerpage">
-  <table id ="lowerpage-column">
-    <tbody>
+  <table id ="lowerpage-columns">
+  <tbody>
       <tr>
-	     <td id="lowerpage-column-one">
+	     <td id="lowerpage-column-one" style="width:30%">
 		    <dl class="portlet" id="portlet-navigation-tree">
                <dt class="portletHeader">
                   <span class="portletTopLeft"></span>

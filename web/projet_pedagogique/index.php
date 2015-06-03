@@ -45,7 +45,7 @@ $query_activite_infos="SELECT * FROM `activite` WHERE `type_activite`='Journee_s
 $q6->DB_query($query_activite_infos);
 $res6=$q6->DB_object();	
 ?>
-<td  id="lowerpage-column-content">
+<td  id="lowerpage-column-content" style="width:70%">
 <br><br>
 <table id="titre_proj_peda">
    <tr>

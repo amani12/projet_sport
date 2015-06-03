@@ -209,19 +209,19 @@ width:200px;
 	*  margin-left from 9->12
 	*/
     position:relative;
-	margin-left:12% ;
+	margin-left:13.37% ;
 	width:1000px;
 	background-position:center;
     background-color: transparent;
-	/*height:500px;*/
 	height:auto;
     padding:0;
 }
 #lowerpage-columns {
-	
+	width: 995px;
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100% !important;
+	background-color:transparent;
+   
 	
 }
 
@@ -231,10 +231,11 @@ width:200px;
 #lowerpage-column-one {
  
     border-collapse: collapse;
-   /* padding: 0;*/
+	padding: 1em;
     vertical-align: top;
-    width: 16em;
-   padding: 1em;
+    width:16em;
+  
+   
 	
   /*border-left: 1px solid #63656b;
   border-right: 1px solid #63656b;
@@ -244,9 +245,10 @@ width:200px;
 
 #lowerpage-column-content {
     border-collapse: collapse;
+	vertical-align: top;
     margin: 0;
     padding: 0;
-    vertical-align: top;
+    
 }
 
 tr.dragging td {
@@ -344,6 +346,7 @@ border-bottom: 1px solid #63656b;
     line-height: 1.2em;
     padding: 0.5em 0 1em;
     text-align: center;
+
 }
 #etat {
     background-color:  #ff0000;

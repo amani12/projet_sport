@@ -5,7 +5,7 @@ require_once('../../inc/tete.inc.php');
 
 		 
 		 
-		 <td  id="lowerpage-column-content">
+		 <td  id="lowerpage-column-content" style="width:70%">
 		 <br><br>
 			<h1>Contrat Pédagogique pour l'option LMD "Sport"<h1>
 			

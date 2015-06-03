@@ -7,7 +7,7 @@ $db = new DB_connection();
 $req="select * from activite where 1";
 $db->DB_query($req);
 ?>
-<td  id="lowerpage-column-content">
+<td  id="lowerpage-column-content" style="width:70%">
 <br><br>
 Guides des activites physiques et sportifs:
 <br>

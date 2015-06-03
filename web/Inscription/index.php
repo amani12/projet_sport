@@ -11,7 +11,7 @@ require_once('../../inc/tete.inc.php');
 if(true) {
 
 echo ' 
- <td  id="lowerpage-column-content"><br><br>
+ <td  id="lowerpage-column-content" style="width:70%"><br><br>
 			<form name="frm" action="traitement.php" method ="post" enctype="multipart/form-data">
 			<b>FICHE D\'INSCRIPTION</b>
 			<table>

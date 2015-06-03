@@ -12,12 +12,12 @@ $db->DB_query($requete);
 
 		 
 		 
-		 <td  id="lowerpage-column-content">
+		 <td  id="lowerpage-column-content" style="width:70%">
 		    <br><br>
 			<table id="column-content-table">
 			 <tr>
-			    <td>
-				<img src="../../img/anniv.jpg" alt="40ans anniversaire" style="width:304px;height:228px">
+			    <td style="vertical-align: top">
+				<img src="../../img/anniv.jpg" alt="40ans anniversaire" style="width:228px;height:228px">
 				</td>
 				<td>
 				  <h2>Actualit&eacute;s</h2>
@@ -25,7 +25,7 @@ $db->DB_query($requete);
 				    $p=0;
 				    while($p<3 && $res=$db->DB_object())
 					{ 
-				       echo '<p>';
+				       echo '<table>';
 					   echo '<b>';
 					   echo  $res->titre;
 					   echo '</b><br>';
@@ -42,7 +42,7 @@ $db->DB_query($requete);
 			</table>
 		 </td>
       </tr>
-    </tbody>
+	   </tbody>
   </table>
 </div>
 

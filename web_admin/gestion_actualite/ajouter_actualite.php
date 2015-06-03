@@ -22,7 +22,7 @@ echo '
 	
 	while($ligne=$db->DB_object())
 	{
-		echo '<input type="checkbox" name="activite[]" value="'.$ligne->ref_activite .'">'.$ligne->ref_activite ;
+		echo '<input type="checkbox" name="activite[]" value="'.$ligne->ref_activite .'">'.$ligne->nom_activite ;
 	}
 	
 	echo '</td></tr><tr><td colspan="2"><input type="submit" name="okkkk"></td><tr>';
@@ -36,10 +36,13 @@ $db1=new DB_connection();
 $req="insert into actualite (titre,description_act)Values('".$db1->DB_escape($_POST['titre'])."','".$db1->DB_escape($_POST['desc']) ."')";
 $db1->DB_query($req);
 $id=$db1->DB_id();
+if(isset($_POST['activite']))
+{
 foreach($_POST['activite'] as $valeur)
 {
    $req="insert into concerner (id_actualite,ref_activite)Values('".$id."','".$valeur ."')";
    $db1->DB_query($req);
+}
 }
 header("Refresh:0;url=index.php");
 }

@@ -12,6 +12,7 @@ $db->DB_query($requete);
 		 
 		 
 		 <td  id="lowerpage-column-content">
+		 <div id="empty"><br><br></div>
 			<table id="column-content-table">
 			 <tr>
 			    <td>
