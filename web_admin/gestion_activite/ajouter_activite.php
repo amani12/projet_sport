@@ -1,7 +1,7 @@
 <?php
-if(!$_SESSION['isLoggedAdmin'])
-{
-	header("Location:../");
+if(!$_SESSION['isLoggedAdmin']) {
+  header("location:http://localhost/projet_sport/web_admin/connexion_admin/"); 
+  die(); 
 }
 require_once('../../inc/header.inc.php');
 require_once('../../inc/teteadmin.inc.php');
