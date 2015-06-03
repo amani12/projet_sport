@@ -1,17 +1,18 @@
 <?php
+
+require_once('../../inc/header.inc.php');
+require_once('../../inc/teteadmin.inc.php');
 if(!$_SESSION['isLoggedAdmin']) {
   header("location:http://localhost/projet_sport/web_admin/connexion_admin/"); 
   die(); 
 }
-require_once('../../inc/header.inc.php');
-require_once('../../inc/teteadmin.inc.php');
 ?>
 <?php
 
 	$db=new DB_connection();
 	$req="select * from appartenir where code_statue=1";
 	$db->DB_query($req);
-	session_start();
+	
 	
 ?>
 <?php if(!isset($_GET['re']))
@@ -120,7 +121,7 @@ else
 $_SESSION['ref']="";
 $_SESSION['n']="";
 $_SESSION['desc']="";
-$req="insert into activite (ref_activite,nom_activite,description_activite,date_premier_cours,type_activite,nbre_fixe_heure,capacite_max,etat)Values('".$db1->DB_escape($_POST['ref'])."','".$db1->DB_escape($_POST['nom']) ."','".$db1->DB_escape($_POST['desc']) ."','".$_POST['date1'] ."','".$_POST['type'] ."','".$_POST['nbh'] ."', '".$_POST['cap'] ."','1')";
+$req="insert into activite (ref_activite,nom_activite,description_activite,date_premier_cours,type_activite,nbre_fixe_heure,capacite_max,etat,numero_personne)Values('".$db1->DB_escape($_POST['ref'])."','".$db1->DB_escape($_POST['nom']) ."','".$db1->DB_escape($_POST['desc']) ."','".$_POST['date1'] ."','".$_POST['type'] ."','".$_POST['nbh'] ."', '".$_POST['cap'] ."','1','".$_POST['responsable']."')";
 $db1->DB_query($req);
 header("Refresh:0;url=index.php");
 }

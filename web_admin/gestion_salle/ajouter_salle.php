@@ -1,7 +1,7 @@
 <?php
 require_once('../../inc/header.inc.php');
 require_once('../../inc/teteadmin.inc.php');
-session_start();
+
 ?>
 <?php if(!isset($_GET['re']))
 {
@@ -29,7 +29,7 @@ echo '
 	Nom:</td><td> <input type="text" name="nom" value="'.$nom .'" required></td></tr>
 	<tr><td>
 	Est elle en maintenance?</td><td> 
-	<input type="radio" name="main" value="0">non 
+	<input type="radio" name="main" value="0" checked>non 
 	<input type="radio" name="main" value="1">oui';
 	
 	echo '</td></tr><tr><td><input type="submit" name="okkkk"></td><td></td></tr>';
@@ -52,7 +52,7 @@ else
 $_SESSION['ref']="";
 $_SESSION['n']="";
 $req="insert into salle (ref_salle,nom_salle,maintenance)Values('".$db1->DB_escape($_POST['ref'])."','".$db1->DB_escape($_POST['nom']) ."','".$_POST['main']."')";
-$db1->DB_query($req);
+$db1->DB_query($req);header("Refresh:0;url=index.php");
 }
 }
 ?>

@@ -27,7 +27,7 @@ $q4 = new DB_connection();
 $query_activite="SELECT * FROM `s_inscrire` WHERE `numero_personne`='".$_SESSION['numero']."'";
 $q4->DB_query($query_activite);
 
-
+$prin=$tran="";
 while($res4=$q4->DB_object()){
 	$q5 = new DB_connection();
 	$query_activite_principale="SELECT `nom_activite` FROM  `activite` WHERE `ref_activite`='".$res4->ref_activite."'";
